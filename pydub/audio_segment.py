@@ -750,6 +750,10 @@ class AudioSegment(object):
         return cls.from_file(file, 'wav', parameters=parameters)
 
     @classmethod
+    def from_wav_stream(cls, bytestream, parameters=None):
+        return cls(data=bytestream)
+
+    @classmethod
     def from_raw(cls, file, **kwargs):
         return cls.from_file(file, 'raw', sample_width=kwargs['sample_width'], frame_rate=kwargs['frame_rate'],
                              channels=kwargs['channels'])
