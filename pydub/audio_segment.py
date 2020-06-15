@@ -102,6 +102,7 @@ def extract_wav_headers(data):
             break
         pos += subchunk_size + 8
 
+    print(subchunks)
     return subchunks
 
 
